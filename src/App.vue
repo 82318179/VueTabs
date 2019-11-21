@@ -1,24 +1,45 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <tabs ref="tab" v-model="tab" :tabs="tabs"></tabs>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Tabs from "./components/Tabs.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    HelloWorld
+    Tabs
+  },
+  data() {
+    return {
+      tab: "google",
+      tabs: [
+        {
+          label: "google",
+          key: "google",
+          favico: require("./assets/google.jpg")
+        },
+        {
+          label: "facebook",
+          key: "facebook",
+          favico: require("./assets/fb.jpg")
+        },
+        {
+          label: "facebook1",
+          key: "facebook1",
+          favico: require("./assets/fb.jpg")
+        }
+      ]
+    };
   }
-}
+};
 </script>
 
 <style lang="scss">
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
