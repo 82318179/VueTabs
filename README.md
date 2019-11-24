@@ -1,5 +1,9 @@
 # tabs
 
+Demo 地址
+
+https://82318179.github.io/VueTabs/
+
 预览效果
 
 ![效果图](./4.gif)
